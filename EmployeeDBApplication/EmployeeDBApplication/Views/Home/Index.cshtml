@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+
+    <div class="col-md-6">
+        <h2>Employee</h2>
+        <p>
+            Таблица с сотрудниками в которой находится: Полное имя, пол, адрес проживания, номер телефона, семейный статус, а так же звенующее таблица где он работает и какая у него должность.
+        </p>
+        <p><a class="btn btn-default" @Html.ActionLink("Перейти", "Index", "Employees")</a></p>
+    </div>
+    <div class="col-md-6">
+        <h2>Document</h2>
+        <p>Документы сотрудников. Содержит Серию, дату выдачи, фото(возможно пустое значение), тип к которому относится.</p>
+        <p><a class="btn btn-default" @Html.ActionLink("Перейти", "Index", "Documents")</a></p>
+    </div>
+    <div class="col-md-6">
+        <h2>Depatment</h2>
+        <p>Отдел, где работает сотрудник. Содержит имя отдела, ставку отдела.</p>
+        <p><a class="btn btn-default" @Html.ActionLink("Перейти", "Index", "Departments")</a></p>
+    </div>
+    <div class="col-md-6">
+        <h2>Position</h2>
+        <p>Должность сотрудника, Содержит Наименование должности и ставку.</p>
+        <p><a class="btn btn-default" @Html.ActionLink("Перейти", "Index", "Positions")</a></p>
+    </div>
+    <div class="col-md-6">
+        <h2>Type Document</h2>
+        <p>Хранит типы документов</p>
+        <p><a class="btn btn-default" @Html.ActionLink("Перейти", "Index", "TypeDocuments")</a></p>
+    </div>
+    <div class="col-md-6">
+        <h2>Department Position</h2>
+        <p>Содержит Отдел и позицию сотрудников</p>
+        <p><a class="btn btn-default" @Html.ActionLink("Перейти", "Index", "Department_Position")</a></p>
+    </div>
+    <div class="col-md-6">
+        <h2>Employment Historie</h2>
+        <p>Трудовая книжка сотрудника</p>
+        <p><a class="btn btn-default" @Html.ActionLink("Перейти", "Index", "EmploymentHistories")</a></p>
+    </div>
+
+</div>

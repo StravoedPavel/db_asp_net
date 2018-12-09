@@ -1,0 +1,55 @@
+﻿@model EmployeeDBApplication.Models.EmploymentHistory
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>EmploymentHistory</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Employee.FullName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Employee.FullName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.EmploymentDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EmploymentDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfDismissal)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DateOfDismissal)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Experience)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Experience)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id_EmploymentHistory }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿@model EmployeeDBApplication.Models.Document
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Document</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TypeDocument.TypeName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TypeDocument.TypeName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Series)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Series)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfIssue)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DateOfIssue)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Scan)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Scan)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id_Document }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

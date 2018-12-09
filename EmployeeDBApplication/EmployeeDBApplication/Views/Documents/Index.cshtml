@@ -1,0 +1,56 @@
+﻿@model IEnumerable<EmployeeDBApplication.Models.Document>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TypeDocument.TypeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Series)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfIssue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scan)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeDocument.TypeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Series)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfIssue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Scan)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id_Document }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id_Document }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id_Document })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

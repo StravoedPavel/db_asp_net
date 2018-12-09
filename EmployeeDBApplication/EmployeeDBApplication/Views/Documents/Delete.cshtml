@@ -1,0 +1,61 @@
+﻿@model EmployeeDBApplication.Models.Document
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Document</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TypeDocument.TypeName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TypeDocument.TypeName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Series)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Series)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfIssue)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DateOfIssue)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Scan)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Scan)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>
